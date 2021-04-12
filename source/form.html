@@ -20,7 +20,6 @@
           <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
           <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
         </ul>
-
       </div>
     </nav>
   </header>
@@ -32,47 +31,59 @@
           программу питания для вашего кота</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
           <div class="cat-profile">
-            <label for="login">ИМЯ:<sup>*</sup>
-              <input class="cat-form" type="text" name="login" id="login" value="БАРСИК" required>
+            <label class="site-text__form" for="login">ИМЯ:<sup>*</sup>
+              <input class="cat-form site-text__form" type="text" name="login" id="login" value="БАРСИК" required>
             </label>
-            <label for="cat-weight">ВЕС:<sup>*</sup>
-              <input class="cat-form"" type=" text" name="cat-weight" id="cat-weight" value="7" required>
+            <label class="site-text__form" for="cat-weight">ВЕС:<sup>*</sup>
+              <input class="cat-form site-text__form" type="text" name="cat-weight" id="cat-weight" value="7" required>
             </label>
-            <label for="cat-age">Возраст (лет):</label>
-            <input class="cat-form"" type=" text" name="cat-age" id="cat-age" value="7">
+            <label class="site-text__form" for="cat-age">Возраст (лет):</label>
+            <input class="cat-form site-text__form" type="text" name="cat-age" id="cat-age" value="7">
           </div>
           <fieldset class="form-wrapper--usual">
             <div class="cat-programm">
-              <label for="slim-programm"></label><input type="radio" name="slim-programm" id="slim-programm">
-              <label for="muscule-programm"></label><input type="radio" name="muscule-programm" id="muscule-programm">
-              <label for="advice-programm"></label><input type="radio" name="advice-programm" id="advice-programm">
+              <input class="cat-form" type="radio" name="slim-programm" id="slim-programm" checked><label
+                class="site-text__form" for="slim-programm">похудение</label>
+              <input class="cat-form" type="radio" name="muscule-programm" id="muscule-programm"><label
+                class="site-text__form" for="muscule-programm">Набор
+                массы</label>
+              <label class="site-text__form" for="advice-programm">Не знаю (Нужен ваш совет)</label><input
+                class="cat-form" type="radio" name="advice-programm" id="advice-programm"><label
+                for="advice-programm">Не знаю (Нужен ваш совет)</label>
             </div>
           </fieldset>
           <fieldset class="form-wrapper">
             <legend class="site-text--form-title">Контактные данные
               (владельца кота)</legend>
             <div class="cat-owner-contact">
-              <label for="cat-owner-email"></label><input type="email" name="cat-owner-email" id="cat-owner-email"
-                placeholder="kuklachev@gmail.com" required>
-              <label for="cat-owner-tel"></label><input type="tel" name="cat-owner-tel" id="cat-owner-tel"
-                placeholder="8 (960) 900-60-90" required pattern="8-([0-9]{3})[0-9]{3}-[0-9]{2}-[0-9]{2}">
+              <label for="cat-owner-email" class="site-text__form">email:<sup>*</sup></label>
+              <div class="input-wrapper">
+                <input class="cat-form" type="email" name="cat-owner-email" id="cat-owner-email"
+                  placeholder="kuklachev@gmail.com" required>
+              </div>
+              <label class="site-text__form" for="cat-owner-tel"></label>
+              <div class="input-wrapper">
+                <input class="cat-form" type="tel" name="cat-owner-tel" id="cat-owner-tel"
+                  placeholder="8 (960) 900-60-90" required pattern="8-([0-9]{3})[0-9]{3}-[0-9]{2}-[0-9]{2}">
+              </div>
             </div>
           </fieldset>
           <fieldset class="form-wrapper">
             <legend class="site-text--form-title">Комментарий</legend>
             <label for="comments"></label>
-            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            <textarea class="cat-form site-text__form" name="comments" id="comments" cols="30" rows="10"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="form-wrapper">
             <legend class="site-text--form-title">Дополнительно</legend>
-            <input type="checkbox" name="no-sugar" id="no-sugar">
-            <label for="nosugar">сахарозаменитель</label>
-            <input type="checkbox" name="water" id="water">
-            <label for="water">питьевая вода</label>
-            <input type="checkbox" name="milk" id="milk">
-            <label for="milk">молоко</label>
-            <input type="checkbox" name="vitamin" id="vitamin">
-            <label for="vitamin">витамины</label>
+            <input class="cat-form" type="checkbox" name="no-sugar" id="no-sugar" checked>
+            <label class="site-text__form" for="no-sugar">сахарозаменитель</label>
+            <input class="cat-form" type="checkbox" name="water" id="water">
+            <label class="site-text__form" for="water">питьевая вода</label>
+            <input class="cat-form" type="checkbox" name="milk" id="milk">
+            <label class="site-text__form" for="milk">молоко</label>
+            <input class="cat-form" type="checkbox" name="vitamin" id="vitamin">
+            <label class="site-text__form" for="vitamin">витамины</label>
           </fieldset>
         </form>
       </div>
@@ -80,7 +91,7 @@
     <section class="contact">
       <div class="contact-wrapper">
         <div class="contact__adress">
-          <p class="contact__title">приглашаем к сотрудничеству дилеров!</p>
+          <h2 class="contact__title">приглашаем к сотрудничеству дилеров!</h2>
           <p class="site-text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <div class="contact__map"></div>
@@ -104,7 +115,6 @@
         <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
       </div>
     </div>
-
   </footer>
 </body>
 
