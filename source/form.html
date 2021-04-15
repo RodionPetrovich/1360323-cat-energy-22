@@ -26,73 +26,112 @@
   <main class="page-main">
     <section class="programm-choice">
       <div class="programm-choice__wrapper">
-        <h1 class="site-text--title">Подбор программы</h1>
-        <h2>Заполните анкету, и мы подберем
+        <h1 class="text-title">Подбор программы</h1>
+        <h2 class="text-uppercase">Заполните анкету, и мы подберем
           программу питания для вашего кота</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="cat-profile">
-            <label class="site-text__form" for="login">ИМЯ:<sup>*</sup>
-              <input class="cat-form site-text__form" type="text" name="login" id="login" value="БАРСИК" required>
-            </label>
-            <label class="site-text__form" for="cat-weight">ВЕС:<sup>*</sup>
-              <input class="cat-form site-text__form" type="text" name="cat-weight" id="cat-weight" value="7" required>
-            </label>
-            <label class="site-text__form" for="cat-age">Возраст (лет):</label>
-            <input class="cat-form site-text__form" type="text" name="cat-age" id="cat-age" value="7">
+          <div class="user-form">
+            <div class="user-form__item">
+              <label class="text-uppercase" for="login">ИМЯ:<sup>*</sup>
+                <input class="user-form__field text-uppercase" type="text" name="login" id="login" value="БАРСИК"
+                  required>
+              </label>
+            </div>
+
+            <div class="user-form__item">
+              <label class="text-uppercase" for="cat-weight">ВЕС:<sup>*</sup>
+                <input class="user-form__field text-uppercase" type="text" name="cat-weight" id="cat-weight" value="7"
+                  required>
+              </label>
+            </div>
+
+            <div class="user-form__item">
+              <label class="text-uppercase" for="cat-age">Возраст (лет):</label>
+              <input class="user-form__field text-uppercase" type="text" name="cat-age" id="cat-age" value="7">
+            </div>
           </div>
-          <fieldset class="form-wrapper--usual">
-            <div class="cat-programm">
-              <input class="cat-form" type="radio" name="slim-programm" id="slim-programm" checked><label
-                class="site-text__form" for="slim-programm">похудение</label>
-              <input class="cat-form" type="radio" name="muscule-programm" id="muscule-programm"><label
-                class="site-text__form" for="muscule-programm">Набор
-                массы</label>
-              <label class="site-text__form" for="advice-programm">Не знаю (Нужен ваш совет)</label><input
-                class="cat-form" type="radio" name="advice-programm" id="advice-programm"><label
-                for="advice-programm">Не знаю (Нужен ваш совет)</label>
-            </div>
-          </fieldset>
+
+
+          <div class="cat-programm">
+            <ul class="cat-programm__list">
+              <li class="cat-programm__item">
+                <input class="visually-hidden cat-programm__radio" type="radio" name="slim-programm" id="slim-programm"
+                  checked>
+                <label class="text-uppercase" for="slim-programm">похудение</label>
+              </li>
+              <li class="cat-programm__item">
+                <input class="visually-hidden cat-programm__radio" type="radio" name="muscule-programm"
+                  id="muscule-programm">
+                <label class="text-uppercase" for="muscule-programm">Набор массы</label>
+              </li>
+              <li class="cat-programm__item">
+                <input class="visually-hidden cat-programm__radio" type="radio" name="advice-programm"
+                  id="advice-programm">
+                <label class="text-uppercase" for="advice-programm">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </div>
+
           <fieldset class="form-wrapper">
-            <legend class="site-text--form-title">Контактные данные
+            <legend class="text-title">Контактные данные
               (владельца кота)</legend>
-            <div class="cat-owner-contact">
-              <label for="cat-owner-email" class="site-text__form">email:<sup>*</sup></label>
+            <div class="user-form__item">
+              <label class="text-uppercase" for="cat-owner-email">email:<sup>*</sup>
+                <div class="input-wrapper">
+                  <input class="user-form__field text-uppercase" type="email" name="email" id="cat-owner-email"
+                    placeholder="kuklachev@gmail.com" required>
+                </div>
+              </label>
+            </div>
+            <div class="user-form__item">
+              <label class="text-uppercase" for="cat-owner-tel">телефон:<sup>*</sup></label>
               <div class="input-wrapper">
-                <input class="cat-form" type="email" name="cat-owner-email" id="cat-owner-email"
-                  placeholder="kuklachev@gmail.com" required>
-              </div>
-              <label class="site-text__form" for="cat-owner-tel">телефон:<sup>*</sup></label>
-              <div class="input-wrapper">
-                <input class="cat-form" type="tel" name="cat-owner-tel" id="cat-owner-tel"
-                  placeholder="8 (960) 900-60-90" required pattern="8-([0-9]{3})[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                <input class="user-form__field text-uppercase" type="tel" name="telephone" id="cat-owner-tel"
+                  placeholder="8 (960) 900-60-90" required pattern="\8\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
               </div>
             </div>
           </fieldset>
+
           <fieldset class="form-wrapper">
-            <legend class="site-text--form-title">Комментарий</legend>
+            <legend class="text-title">Комментарий</legend>
             <label for="comments"></label>
-            <textarea class="cat-form site-text__form" name="comments" id="comments" cols="30" rows="10"
+            <textarea class="user-form__field text-uppercase" name="comments" id="comments" cols="30" rows="10"
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
+
           <fieldset class="form-wrapper">
-            <legend class="site-text--form-title">Дополнительно</legend>
-            <input class="cat-form" type="checkbox" name="no-sugar" id="no-sugar" checked>
-            <label class="site-text__form" for="no-sugar">сахарозаменитель</label>
-            <input class="cat-form" type="checkbox" name="water" id="water">
-            <label class="site-text__form" for="water">питьевая вода</label>
-            <input class="cat-form" type="checkbox" name="milk" id="milk">
-            <label class="site-text__form" for="milk">молоко</label>
-            <input class="cat-form" type="checkbox" name="vitamin" id="vitamin">
-            <label class="site-text__form" for="vitamin">витамины</label>
+            <legend class="text-title">Дополнительно</legend>
+            <ul class="cat-add">
+              <li class="cat-add__item">
+                <input class="visually-hidden cat-add__checkbox" type="checkbox" name="no-sugar" id="no-sugar" checked>
+                <label class="text-uppercase" for="no-sugar">сахарозаменитель</label>
+              </li>
+              <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="water"
+                  id="water">
+                <label class="text-uppercase" for="water">питьевая вода</label>
+              </li>
+              <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="milk"
+                  id="milk">
+                <label class="text-uppercase" for="milk">молоко</label>
+              </li>
+              <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="vitamin"
+                  id="vitamin">
+                <label class="text-uppercase" for="vitamin">витамины</label>
+              </li>
+            </ul>
+            <input class="text-uppercase" type="submit" value="отправить заявку">
+            <p class="text-usual"><sup>*</sup> — Обязательные поля</p>
           </fieldset>
+
         </form>
       </div>
     </section>
+
     <section class="contact">
       <div class="contact-wrapper">
         <div class="contact__adress">
-          <h2 class="contact__title">приглашаем к сотрудничеству дилеров!</h2>
-          <p class="site-text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <h2 class="contact__title text-uppercase">приглашаем к сотрудничеству дилеров!</h2>
+          <p class="text-usual">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <div class="contact__map"></div>
       </div>
