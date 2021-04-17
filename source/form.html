@@ -23,6 +23,7 @@
       </div>
     </nav>
   </header>
+
   <main class="page-main">
     <section class="programm-choice">
       <div class="programm-choice__wrapper">
@@ -32,19 +33,15 @@
         <form action="https://echo.htmlacademy.ru" method="post">
           <div class="user-form">
             <div class="user-form__item">
-              <label class="text-uppercase" for="login">ИМЯ:<sup>*</sup>
-                <input class="user-form__field text-uppercase" type="text" name="login" id="login" value="БАРСИК"
-                  required>
-              </label>
+              <label class="text-uppercase" for="login">ИМЯ:<sup>*</sup></label>
+              <input class="user-form__field text-uppercase" type="text" name="login" id="login" value="БАРСИК"
+                required>
             </div>
-
             <div class="user-form__item">
-              <label class="text-uppercase" for="cat-weight">ВЕС:<sup>*</sup>
-                <input class="user-form__field text-uppercase" type="text" name="cat-weight" id="cat-weight" value="7"
-                  required>
-              </label>
+              <label class="text-uppercase" for="cat-weight">ВЕС:<sup>*</sup></label>
+              <input class="user-form__field text-uppercase" type="text" name="cat-weight" id="cat-weight" value="7"
+                required>
             </div>
-
             <div class="user-form__item">
               <label class="text-uppercase" for="cat-age">Возраст (лет):</label>
               <input class="user-form__field text-uppercase" type="text" name="cat-age" id="cat-age" value="7">
@@ -55,17 +52,17 @@
           <div class="cat-programm">
             <ul class="cat-programm__list">
               <li class="cat-programm__item">
-                <input class="visually-hidden cat-programm__radio" type="radio" name="slim-programm" id="slim-programm"
+                <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm" id="slim-programm"
                   checked>
                 <label class="text-uppercase" for="slim-programm">похудение</label>
               </li>
               <li class="cat-programm__item">
-                <input class="visually-hidden cat-programm__radio" type="radio" name="muscule-programm"
+                <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm"
                   id="muscule-programm">
                 <label class="text-uppercase" for="muscule-programm">Набор массы</label>
               </li>
               <li class="cat-programm__item">
-                <input class="visually-hidden cat-programm__radio" type="radio" name="advice-programm"
+                <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm"
                   id="advice-programm">
                 <label class="text-uppercase" for="advice-programm">Не знаю (Нужен ваш совет)</label>
               </li>
@@ -75,28 +72,32 @@
           <fieldset class="form-wrapper">
             <legend class="text-title">Контактные данные
               (владельца кота)</legend>
-            <div class="user-form__item">
-              <label class="text-uppercase" for="cat-owner-email">email:<sup>*</sup>
+            <div class="user__form">
+              <div class="user-form__item">
+                <label class="text-uppercase" for="cat-owner-email">email:<sup>*</sup></label>
                 <div class="input-wrapper">
                   <input class="user-form__field text-uppercase" type="email" name="email" id="cat-owner-email"
                     placeholder="kuklachev@gmail.com" required>
                 </div>
-              </label>
-            </div>
-            <div class="user-form__item">
-              <label class="text-uppercase" for="cat-owner-tel">телефон:<sup>*</sup></label>
-              <div class="input-wrapper">
-                <input class="user-form__field text-uppercase" type="tel" name="telephone" id="cat-owner-tel"
-                  placeholder="8 (960) 900-60-90" required pattern="\8\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
+
+              </div>
+              <div class="user-form__item">
+                <label class="text-uppercase" for="cat-owner-tel">телефон:<sup>*</sup></label>
+                <div class="input-wrapper">
+                  <input class="user-form__field text-uppercase" type="tel" name="telephone" id="cat-owner-tel"
+                    placeholder="8 (960) 900-60-90" required pattern="\8\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
+                </div>
               </div>
             </div>
           </fieldset>
 
           <fieldset class="form-wrapper">
             <legend class="text-title">Комментарий</legend>
-            <label for="comments"></label>
-            <textarea class="user-form__field text-uppercase" name="comments" id="comments" cols="30" rows="10"
-              placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="user-form">
+              <label class="visually-hidden" for="comments">Комментарий</label>
+              <textarea class="user-form__field text-uppercase" name="comments" id="comments" cols="30" rows="10"
+                placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </fieldset>
 
           <fieldset class="form-wrapper">
@@ -119,10 +120,9 @@
                 <label class="text-uppercase" for="vitamin">витамины</label>
               </li>
             </ul>
-            <input class="text-uppercase" type="submit" value="отправить заявку">
+            <button class="text-uppercase" type="submit" value="отправить заявку"></button>
             <p class="text-usual"><sup>*</sup> — Обязательные поля</p>
           </fieldset>
-
         </form>
       </div>
     </section>
@@ -137,10 +137,11 @@
       </div>
     </section>
   </main>
+
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__name"></div>
-      <div class="page-footer__social">
+      <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item"><a href="https://vk.com/htmlacademy" class="social__link social__link--vk"></a></li>
           <li class="social__item"><a href="https://www.instagram.com/htmlacademy"
@@ -150,7 +151,7 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright">
+      <div class="page-footer__copyright copyright">
         <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
       </div>
     </div>
