@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
+
 <body class="page-body">
   <header class="page-header">
     <a class="page-header__logo">
@@ -18,53 +19,142 @@
           <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
           <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
         </ul>
-
       </div>
     </nav>
   </header>
-<main class="page-main">
-<section class="programm-choice">
-<div class="programm-choice__wrapper">
-  <h1 class="site-text--title">Подбор программы</h1>
-<form action="https://echo.htmlacademy.ru" method="post">
-<legend>Заполните анкету, и мы подберем
-  программу питания для вашего кота</legend>
-  <div class="cat-profile">
-  <label for="login">ИМЯ:<sup>*</sup>
-  <input type="text" name="login" id="login" value="БАРСИК">
-  </label>
-  <label for="cat-weight">ВЕС:<sup>*</sup><sup>*</sup>
-    <input type="text" name="cat-weight" id="cat-weight">
 
-  </label>
+  <main class="page-main">
+    <section class="programm-choice">
+      <div class="programm-choice__wrapper">
+        <h1 class="text-title">Подбор программы</h1>
+        <h2 class="text-uppercase">Заполните анкету, и мы подберем
+          программу питания для вашего кота</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div class="user-form">
+            <div class="user-form__item">
+              <label class="text-uppercase" for="login">ИМЯ:<sup>*</sup></label>
+              <input class="user-form__field text-uppercase" type="text" name="login" id="login" value="БАРСИК"
+                required>
+            </div>
+            <div class="user-form__item">
+              <label class="text-uppercase" for="cat-weight">ВЕС:<sup>*</sup></label>
+              <input class="user-form__field text-uppercase" type="text" name="cat-weight" id="cat-weight" value="7"
+                required>
+            </div>
+            <div class="user-form__item">
+              <label class="text-uppercase" for="cat-age">Возраст (лет):</label>
+              <input class="user-form__field text-uppercase" type="text" name="cat-age" id="cat-age" value="7">
+            </div>
+          </div>
 
 
+          <div class="cat-programm">
+            <ul class="cat-programm__list">
+              <li class="cat-programm__item">
+                <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm" id="slim-programm"
+                  checked>
+                <label class="text-uppercase" for="slim-programm">похудение</label>
+              </li>
+              <li class="cat-programm__item">
+                <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm"
+                  id="muscule-programm">
+                <label class="text-uppercase" for="muscule-programm">Набор массы</label>
+              </li>
+              <li class="cat-programm__item">
+                <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm"
+                  id="advice-programm">
+                <label class="text-uppercase" for="advice-programm">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </div>
 
+          <fieldset class="form-wrapper">
+            <legend class="text-title">Контактные данные
+              (владельца кота)</legend>
+            <div class="user-form">
+              <div class="user-form__item">
+                <label class="text-uppercase" for="cat-owner-email">email:<sup>*</sup></label>
+                <div class="input-wrapper">
+                  <input class="user-form__field text-uppercase" type="email" name="email" id="cat-owner-email"
+                    placeholder="kuklachev@gmail.com" required>
+                </div>
 
-  </div>
+              </div>
+              <div class="user-form__item">
+                <label class="text-uppercase" for="cat-owner-tel">телефон:<sup>*</sup></label>
+                <div class="input-wrapper">
+                  <input class="user-form__field text-uppercase" type="tel" name="telephone" id="cat-owner-tel"
+                    placeholder="8 (960) 900-60-90" required pattern="\8\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
+                </div>
+              </div>
+            </div>
+          </fieldset>
 
+          <fieldset class="form-wrapper">
+            <legend class="text-title">Комментарий</legend>
+            <div class="user-form">
+              <label class="visually-hidden" for="comments">Комментарий</label>
+              <textarea class="user-form__field text-uppercase" name="comments" id="comments" cols="30" rows="10"
+                placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </fieldset>
 
-</form>
+          <fieldset class="form-wrapper">
+            <legend class="text-title">Дополнительно</legend>
+            <ul class="cat-add">
+              <li class="cat-add__item">
+                <input class="visually-hidden cat-add__checkbox" type="checkbox" name="no-sugar" id="no-sugar" checked>
+                <label class="text-uppercase" for="no-sugar">сахарозаменитель</label>
+              </li>
+              <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="water"
+                  id="water">
+                <label class="text-uppercase" for="water">питьевая вода</label>
+              </li>
+              <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="milk"
+                  id="milk">
+                <label class="text-uppercase" for="milk">молоко</label>
+              </li>
+              <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="vitamin"
+                  id="vitamin">
+                <label class="text-uppercase" for="vitamin">витамины</label>
+              </li>
+            </ul>
+            <button class="text-uppercase" type="submit">отправить заявку</button>
+            <p class="text-usual"><sup>*</sup> — Обязательные поля</p>
+          </fieldset>
+        </form>
+      </div>
+    </section>
 
-</div>
+    <section class="contact">
+      <div class="contact-wrapper">
+        <div class="contact__adress">
+          <h2 class="contact__title text-uppercase">приглашаем к сотрудничеству дилеров!</h2>
+          <p class="text-usual">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <div class="contact__map"></div>
+      </div>
+    </section>
+  </main>
 
-</section>
-</main>
-<footer class="page-footer">
-  <div class="page-footer__wrapper">
-    <div class="page-footer__name"></div>
-    <div class="page-footer__social">
-      <ul class="social__list">
-        <li class="social__item"><a href="" class="social__link"></a></li>
-        <li class="social__item"><a href="" class="social__link"></a></li>
-        <li class="social__item"><a href="" class="social__link"></a></li>
-      </ul>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__name"></div>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item"><a href="https://vk.com/htmlacademy" class="social__link social__link--vk"></a></li>
+          <li class="social__item"><a href="https://www.instagram.com/htmlacademy"
+              class="social__link social__link--insta"></a></li>
+          <li class="social__item">
+            <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--facebook"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
+      </div>
     </div>
-    <div class="page-footer__copyright">
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
-    </div>
-  </div>
-
-</footer>
+  </footer>
 </body>
+
 </html>
