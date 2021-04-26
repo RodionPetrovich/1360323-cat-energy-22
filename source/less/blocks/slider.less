@@ -1,0 +1,54 @@
+.slider {
+}
+
+.slider__wrapper {
+  background-color: @dark-grey;
+}
+
+.slider__image {
+  .size(311px;232px);
+  padding: 0;
+  outline: 1px dashed rgb(48, 44, 41);
+
+  &--fat-cat {
+    background-size: contain;
+    background-image: url(../../img/cat-fat.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--slim-cat {
+    background-size: contain;
+    background-image: url(../../img/cat-skinny.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+
+.slider__controls {
+  display: flex;
+}
+
+.slider__scale {
+  .size(84px;14px);
+  box-sizing: border-box;
+  background-color: @white;
+  border-style: inset;
+  border-radius: 6px;
+  border-color: @darken-grey;
+  border-width: 1px;
+  padding-left: 6px;
+  padding-top: 3px;
+
+}
+
+.slider__bar {
+  .size(35px;6px);
+  background-color: @basic-green;
+  border-radius: 6px;
+
+}
+
+.slider__toggle {
+}
