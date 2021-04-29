@@ -1,46 +1,63 @@
 .how-it-works__wrapper {
-}
-
-.text-title__section {
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .how-it-works__list {
   list-style: none;
+  padding: 0;
+  color: @text-grey;
+  margin-top: 30px;
+  min-height: 330px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .how-it-works__item {
-  .size (100%;60px);
-  outline: dashed black 1px;
+  box-sizing: border-box;
+  min-height: 60px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 
   &:nth-child(1) .how-it-works__img-wrapper {
-    background-image: url(../../img/icon_leaf.png);
+    background-image: url("../../img/icon_leaf.png");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &:nth-child(2) .how-it-works__img-wrapper {
-    background-image: url(../../img/icon_tub.png);
+    background-image: url("../../img/icon_tub.png");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &:nth-child(3) .how-it-works__img-wrapper {
-    background-image: url(../../img/icon_eat.png);
+    background-image: url("../../img/icon_eat.png");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &:nth-child(4) .how-it-works__img-wrapper {
-    background-image: url(../../img/icon_alarm.png);
+    background-image: url("../../img/icon_alarm.png");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  & p {
+    margin: 0;
+    align-self: center;
+    max-width: 201px;
   }
 }
 
 .how-it-works__img-wrapper {
-  .size(60px;60px);
+  min-width: 60px;
   background-color: @basic-green;
   padding: 0;
+  margin-right: 20px;
 }
 

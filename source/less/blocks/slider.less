@@ -12,14 +12,14 @@
 
   &--fat-cat {
     background-size: contain;
-    background-image: url(../../img/cat-fat.jpg);
+    background-image: url("../../img/cat-fat.png");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--slim-cat {
     background-size: contain;
-    background-image: url(../../img/cat-skinny.jpg);
+    background-image: url("../../img/cat-skinny.png");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -28,6 +28,14 @@
 
 .slider__controls {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+}
+
+.slider__desc {
+  min-width: 60px;
+  margin: 0;
 }
 
 .slider__scale {
@@ -40,15 +48,14 @@
   border-width: 1px;
   padding-left: 6px;
   padding-top: 3px;
-
 }
 
 .slider__bar {
   .size(35px;6px);
   background-color: @basic-green;
   border-radius: 6px;
-
 }
 
-.slider__toggle {
+.slider__toggle + .slider__desc {
+  text-align: right;
 }

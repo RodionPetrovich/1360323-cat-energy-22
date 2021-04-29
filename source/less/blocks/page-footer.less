@@ -2,80 +2,18 @@
 }
 
 .page-footer__wrapper {
+  background-color: @grey;
 }
 
 .page-footer__name {
-  background: url(../../img/footer-logo\ 2.svg) no-repeat center;
-  height: 24px;
+  background: url("../../img/footer-logo.svg") no-repeat center;
+  min-height: 95px;
 }
 
 .page-footer__social {
 }
 
-.social {
-}
-
-.social__list {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
-
-.social__item {
-}
-
-.social__link {
-  &--facebook {
-    stroke: @social-grey;
-    fill: white;
-  }
-
-  &--facebook:hover,
-  &--facebook:link {
-    stroke: @basic-green;
-    fill: white;
-  }
-
-  &--facebook:active {
-    stroke: fade(@basic-green, 30%);
-  }
-
-
-  &--vk,
-  &--insta {
-    fill: @social-grey;
-  }
-
-  &--vk:hover,
-  &--insta:hover {
-    fill: @basic-green;
-  }
-
-  &--vk:active,
-  &--insta:active {
-    fill: fade(@basic-green, 30%);
-  }
-}
-
 
 .page-footer__copyright {
-}
-
-.copyright {
-  outline: 1px dashed aqua;
-}
-
-.copyright__link {
-  display: flex;
-  justify-content: space-between;
-
-  & p {
-    align-self: center;
-    align-content: center;
-  }
-
-  & svg {
-    fill: @social-grey;
-    align-self: center;
-  }
+  min-height: 78px;
 }
