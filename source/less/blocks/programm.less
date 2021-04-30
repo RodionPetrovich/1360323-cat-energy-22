@@ -42,9 +42,23 @@
   background-color: @basic-green;
   position: relative;
 
-  img {
+
+  .programm-item__slim {
+    .size(50px;50px);
+    background-image: url("../../img/cat-slim.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .programm-item__pro {
+    .size(70px;50px);
+    background-image: url("../../img/cat-pro.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     position: absolute;
-    overflow: hidden;
+    left: -10px;
   }
 }
 
@@ -69,6 +83,7 @@
   min-height: 37px;
   box-sizing: border-box;
   padding-top: 17px;
+  line-height: 16px;
 }
 
 .programm-item__arrow {

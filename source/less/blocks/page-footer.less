@@ -6,9 +6,26 @@
 }
 
 .page-footer__name {
-  background: url("../../img/footer-logo.svg") no-repeat center;
+  box-sizing: border-box;
   min-height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.page-footer__logo {
+  fill: #111111;
+
+  &:hover,
+  :link {
+    fill: fade(#111111, 80%);
+  }
+
+  &:active {
+    fill: fade(#111111, 60%);
+  }
+}
+
 
 .page-footer__social {
 }
