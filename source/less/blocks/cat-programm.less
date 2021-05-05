@@ -1,15 +1,27 @@
 .cat-programm {
+  box-sizing: border-box;
   border-bottom: 1px solid @darken-grey;
   border-top: 1px solid @darken-grey;
+  min-width: 320px;
+
+
+  @media (min-width: @tablet) {
+    border: none;
+    padding: 70px;
+  }
 }
 
 .cat-programm__list {
+  box-sizing: border-box;
   .mar-pad(0;0);
   list-style: none;
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
-  padding-left: 15px;
+  padding: 30px 20px;
+
+  @media (min-width: @tablet) {
+    border: 1px solid @darken-grey;
+  }
 }
 
 .cat-programm__item {

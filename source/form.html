@@ -11,12 +11,15 @@
 </head>
 
 <body class="page__body">
+
   <header class="page-header">
 
     <div class="page-header__logo">
       <div class="page-header__logo-mobile"><img src="img/logo-mobile.svg" alt=""></div>
       <a href="index.html"><img src="img/footer-logo.svg" alt="CAT ENERGY" class="page-header__logo-image"></a>
-      <button class="main-nav__toggle" type="button"><div></div></button> <span class="visually-hidden">Открыть меню</span>
+      <div class="main-nav__toggle" type="button">
+        <button type="button"></button>
+      </div> <span class="visually-hidden">Открыть меню</span>
     </div>
 
     <nav class="main-nav">
@@ -33,17 +36,19 @@
 
   <main class="page-main">
     <section class="programm-choice">
-      <div class="programm-choice__wrapper">
-        <h1 class="text-title">Подбор программы</h1>
-        <h2 class="text-uppercase">Заполните анкету, и мы подберем
-          программу питания для вашего кота</h2>
-        <form  action="https://echo.htmlacademy.ru" method="post">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="programm-choice__wrapper">
+          <h1 class="text-title">Подбор программы</h1>
+          <h2 class="text-uppercase">Заполните анкету, и мы подберем
+            программу питания для вашего кота</h2>
+
           <div class="user-form">
             <div class="user-form__item">
               <label class="text-uppercase" for="login">ИМЯ:<sup>*</sup></label>
               <input class="user-form__field text-uppercase" type="text" name="login" id="login" value="БАРСИК"
                 required>
             </div>
+
             <div class="user-form__item">
               <label class="text-uppercase" for="cat-weight">ВЕС:<sup>*</sup></label>
               <input class="user-form__field text-uppercase" type="text" name="cat-weight" id="cat-weight" value="7"
@@ -57,101 +62,105 @@
         </div>
 
 
-          <div class="cat-programm">
-            <ul class="cat-programm__list">
-              <li class="cat-programm__item">
-                <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm" id="slim-programm"
-                  checked>
-                <label class="text-uppercase" for="slim-programm">похудение</label>
-              </li>
-              <li class="cat-programm__item">
-                <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm"
-                  id="muscule-programm">
-                <label class="text-uppercase" for="muscule-programm">Набор массы</label>
-              </li>
-              <li class="cat-programm__item">
-                <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm"
-                  id="advice-programm">
-                <label class="text-uppercase" for="advice-programm">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
+        <div class="cat-programm">
+          <ul class="cat-programm__list">
+            <li class="cat-programm__item">
+              <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm" id="slim-programm"
+                checked>
+              <label class="text-uppercase" for="slim-programm">похудение</label>
+            </li>
+            <li class="cat-programm__item">
+              <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm" id="muscule-programm">
+              <label class="text-uppercase" for="muscule-programm">Набор массы</label>
+            </li>
+            <li class="cat-programm__item">
+              <input class="visually-hidden cat-programm__radio" type="radio" name="cat-programm" id="advice-programm">
+              <label class="text-uppercase" for="advice-programm">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </div>
+
+
+        <fieldset class="form-wrapper">
+          <legend class="contact-form text-title">Контактные данные
+            (владельца кота)</legend>
+          <div class="user-form">
+            <div class="user-form__item">
+              <label class="text-uppercase" for="cat-owner-email">email:<sup>*</sup></label>
+              <div class="input-wrapper">
+                <input class="user-form__field user-form__field--none text-uppercase" type="email" name="email"
+                  id="cat-owner-email" value="kuklachev@gmail.com" required>
+                <svg class="icon-email" width="20" height="15" viewBox="0 0 20 15" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <line x1="1.65" y1="5.84766" x2="1.65" y2="13.8477" stroke-width="1.3" />
+                  <line x1="18.65" y1="5.84766" x2="18.65" y2="13.8477" stroke-width="1.3" />
+                  <line x1="1" y1="13.1977" x2="19" y2="13.1977" stroke-width="1.3" />
+                  <line x1="1" y1="1.19766" x2="19" y2="1.19766" stroke-width="1.3" />
+                  <path d="M18.35 3.02975L10 9.5242L1.65 3.02975V1.49766H4.5L10 1.49766H15H18.35V3.02975Z"
+                    stroke-width="1.3" />
+                </svg>
+              </div>
+            </div>
+            <div class="user-form__item">
+              <label class="text-uppercase" for="cat-owner-tel">телефон:<sup>*</sup></label>
+              <div class="input-wrapper">
+                <input class="user-form__field user-form__field--none text-uppercase" type="tel" name="telephone"
+                  id="cat-owner-tel" value="8 (960) 900-60-90" required
+                  pattern="\8\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
+                <svg class="icon-phone" width="20" height="21" viewBox="0 0 20 21" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+
+                  <path
+                    d="M17.9 9.75275H9.39999V10.9569H17.9L15.8 13.0641L16.7 13.9672L19.8 10.8565C19.8974 10.7263 19.95 10.5678 19.95 10.405C19.95 10.2421 19.8974 10.0837 19.8 9.95344L16.7 6.84277L15.8 7.74587L17.9 9.75275Z" />
+                  <path
+                    d="M8.10001 19.7872V13.5659C8.08846 13.41 8.02154 13.2635 7.91142 13.153C7.80131 13.0425 7.65531 12.9754 7.50001 12.9638H3.10001C3.10516 13.2815 3.23325 13.5848 3.45718 13.8095C3.68112 14.0342 3.98336 14.1627 4.30001 14.1679H6.80001V19.1851H3.10001C2.86326 19.2 2.62591 19.1676 2.40176 19.0896C2.17762 19.0117 1.97115 18.8898 1.79436 18.7311C1.61757 18.5723 1.47399 18.3799 1.37196 18.165C1.26992 17.9501 1.21148 17.717 1.20001 17.4793V3.43111C1.19181 2.96681 1.36516 2.51774 1.68292 2.18013C2.00069 1.84252 2.43758 1.64322 2.90001 1.62492H6.80001V6.64212H4.40001C4.08336 6.64729 3.78112 6.77581 3.55718 7.00052C3.33325 7.22523 3.20516 7.52851 3.20001 7.84625H7.60001C7.75531 7.83466 7.90131 7.76751 8.01142 7.65701C8.12154 7.54651 8.18846 7.40002 8.20001 7.24418V0.922517C8.15232 0.76584 8.06117 0.626022 7.93721 0.519407C7.81325 0.412792 7.66161 0.343785 7.50001 0.320453H3.10001C2.70599 0.307054 2.31321 0.371716 1.94411 0.510744C1.57501 0.649771 1.23684 0.860436 0.948933 1.13069C0.661026 1.40095 0.42903 1.7255 0.266207 2.08579C0.103385 2.44608 0.01293 2.83504 1.46306e-05 3.23043V17.1782C-0.0289644 17.5773 0.0246504 17.978 0.157487 18.3552C0.290324 18.7324 0.499509 19.078 0.771886 19.3701C1.04426 19.6623 1.37394 19.8947 1.74019 20.0529C2.10643 20.211 2.50132 20.2913 2.90001 20.2889H7.50001C7.5735 20.304 7.64943 20.3022 7.72216 20.2839C7.7949 20.2655 7.86259 20.2309 7.92021 20.1828C7.97783 20.1346 8.02391 20.074 8.05504 20.0055C8.08616 19.9371 8.10153 19.8624 8.10001 19.7872Z" />
+
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="20" height="20.0688" fill="white" transform="translate(0 0.320435)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </div>
           </div>
+        </fieldset>
 
-          <fieldset class="form-wrapper">
-            <legend class="contact-form text-title">Контактные данные
-              (владельца кота)</legend>
-            <div class="user-form">
-              <div class="user-form__item">
-                <label class="text-uppercase" for="cat-owner-email">email:<sup>*</sup></label>
-                <div class="input-wrapper">
-                  <input class="user-form__field user-form__field--none text-uppercase" type="email" name="email" id="cat-owner-email"
-                    placeholder="kuklachev@gmail.com" required>
-                    <svg class="icon-email" width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <line x1="1.65" y1="5.84766" x2="1.65" y2="13.8477"  stroke-width="1.3"/>
-                      <line x1="18.65" y1="5.84766" x2="18.65" y2="13.8477"  stroke-width="1.3"/>
-                      <line x1="1" y1="13.1977" x2="19" y2="13.1977"  stroke-width="1.3"/>
-                      <line x1="1" y1="1.19766" x2="19" y2="1.19766"  stroke-width="1.3"/>
-                      <path d="M18.35 3.02975L10 9.5242L1.65 3.02975V1.49766H4.5L10 1.49766H15H18.35V3.02975Z"  stroke-width="1.3"/>
-                      </svg>
+        <fieldset class="form-wrapper">
+          <legend class="text-title">Комментарий</legend>
+          <div class="user-form">
+            <label class="visually-hidden" for="comments">Комментарий</label>
+            <textarea class="user-form__field text-uppercase" name="comments" id="comments" cols="30" rows="10"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+        </fieldset>
 
-                </div>
-              </div>
-              <div class="user-form__item">
-                <label class="text-uppercase" for="cat-owner-tel">телефон:<sup>*</sup></label>
-                <div class="input-wrapper">
-                  <input class="user-form__field user-form__field--none text-uppercase" type="tel" name="telephone" id="cat-owner-tel"
-                    placeholder="8 (960) 900-60-90" required pattern="\8\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
-                    <svg class="icon-phone" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0)">
-                      <path d="M17.9 9.75275H9.39999V10.9569H17.9L15.8 13.0641L16.7 13.9672L19.8 10.8565C19.8974 10.7263 19.95 10.5678 19.95 10.405C19.95 10.2421 19.8974 10.0837 19.8 9.95344L16.7 6.84277L15.8 7.74587L17.9 9.75275Z" />
-                      <path d="M8.10001 19.7872V13.5659C8.08846 13.41 8.02154 13.2635 7.91142 13.153C7.80131 13.0425 7.65531 12.9754 7.50001 12.9638H3.10001C3.10516 13.2815 3.23325 13.5848 3.45718 13.8095C3.68112 14.0342 3.98336 14.1627 4.30001 14.1679H6.80001V19.1851H3.10001C2.86326 19.2 2.62591 19.1676 2.40176 19.0896C2.17762 19.0117 1.97115 18.8898 1.79436 18.7311C1.61757 18.5723 1.47399 18.3799 1.37196 18.165C1.26992 17.9501 1.21148 17.717 1.20001 17.4793V3.43111C1.19181 2.96681 1.36516 2.51774 1.68292 2.18013C2.00069 1.84252 2.43758 1.64322 2.90001 1.62492H6.80001V6.64212H4.40001C4.08336 6.64729 3.78112 6.77581 3.55718 7.00052C3.33325 7.22523 3.20516 7.52851 3.20001 7.84625H7.60001C7.75531 7.83466 7.90131 7.76751 8.01142 7.65701C8.12154 7.54651 8.18846 7.40002 8.20001 7.24418V0.922517C8.15232 0.76584 8.06117 0.626022 7.93721 0.519407C7.81325 0.412792 7.66161 0.343785 7.50001 0.320453H3.10001C2.70599 0.307054 2.31321 0.371716 1.94411 0.510744C1.57501 0.649771 1.23684 0.860436 0.948933 1.13069C0.661026 1.40095 0.42903 1.7255 0.266207 2.08579C0.103385 2.44608 0.01293 2.83504 1.46306e-05 3.23043V17.1782C-0.0289644 17.5773 0.0246504 17.978 0.157487 18.3552C0.290324 18.7324 0.499509 19.078 0.771886 19.3701C1.04426 19.6623 1.37394 19.8947 1.74019 20.0529C2.10643 20.211 2.50132 20.2913 2.90001 20.2889H7.50001C7.5735 20.304 7.64943 20.3022 7.72216 20.2839C7.7949 20.2655 7.86259 20.2309 7.92021 20.1828C7.97783 20.1346 8.02391 20.074 8.05504 20.0055C8.08616 19.9371 8.10153 19.8624 8.10001 19.7872Z"/>
-                      </g>
-                      <defs>
-                      <clipPath id="clip0">
-                      <rect width="20" height="20.0688" fill="white" transform="translate(0 0.320435)"/>
-                      </clipPath>
-                      </defs>
-                      </svg>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="form-wrapper">
-            <legend class="text-title">Комментарий</legend>
-            <div class="user-form">
-              <label class="visually-hidden" for="comments">Комментарий</label>
-              <textarea class="user-form__field text-uppercase" name="comments" id="comments" cols="30" rows="10"
-                placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
-          </fieldset>
-
-          <fieldset class="form-wrapper">
-            <legend class="text-title">Дополнительно</legend>
-            <ul class="cat-add">
-              <li class="cat-add__item">
-                <input class="visually-hidden cat-add__checkbox" type="checkbox" name="no-sugar" id="no-sugar" checked>
-                <label class="text-uppercase" for="no-sugar">сахарозаменитель</label>
-              </li>
-              <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="water"
-                  id="water">
-                <label class="text-uppercase" for="water">питьевая вода</label>
-              </li>
-              <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="milk"
-                  id="milk">
-                <label class="text-uppercase" for="milk">молоко</label>
-              </li>
-              <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="vitamin"
-                  id="vitamin">
-                <label class="text-uppercase" for="vitamin">витамины</label>
-              </li>
-            </ul>
-            <div class="cat-add__frapper">
+        <fieldset class="form-wrapper">
+          <legend class="text-title">Дополнительно</legend>
+          <ul class="cat-add">
+            <li class="cat-add__item">
+              <input class="visually-hidden cat-add__checkbox" type="checkbox" name="no-sugar" id="no-sugar" checked>
+              <label class="text-uppercase" for="no-sugar">сахарозаменитель</label>
+            </li>
+            <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="water"
+                id="water">
+              <label class="text-uppercase" for="water">питьевая вода</label>
+            </li>
+            <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="milk"
+                id="milk">
+              <label class="text-uppercase" for="milk">молоко</label>
+            </li>
+            <li class="cat-add__item"><input class="visually-hidden cat-add__checkbox" type="checkbox" name="vitamin"
+                id="vitamin">
+              <label class="text-uppercase" for="vitamin">витамины</label>
+            </li>
+          </ul>
+          <div class="cat-add__frapper">
             <button class="button text-uppercase" type="submit">отправить заявку</button>
             <p class="text-usual"><sup>*</sup> — Обязательные поля</p>
           </div>
-          </fieldset>
-        </form>
+        </fieldset>
+      </form>
 
     </section>
 
@@ -166,31 +175,39 @@
         </div>
       </div>
       <div class="contact__map"></div>
-      </div>
     </section>
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
 
-      <div class="page-footer__name"><a href="index.html"><svg class="page-footer__logo" width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0)">
-        <path d="M1.60253 22.0513C0.468358 20.3682 -0.0946573 18.3503 3.016e-05 16.3077V7.79487C-0.137317 5.73031 0.390444 3.67661 1.50238 1.94872C2.6041 0.615385 4.30676 0 6.81067 0C9.31458 0 10.9171 0.615385 11.9187 1.74359C13.006 3.17255 13.5409 4.96181 13.421 6.76923V8.82051H8.51333V6.46154C8.55297 5.76385 8.45065 5.06533 8.21286 4.41026C8.08576 4.14583 7.88431 3.9264 7.63443 3.78018C7.38455 3.63395 7.09766 3.56763 6.81067 3.58974C6.10958 3.58974 5.60879 3.79487 5.40848 4.30769C5.18191 5.03643 5.08025 5.79984 5.10801 6.5641V17.5385C5.05512 18.2799 5.19327 19.0227 5.50864 19.6923C5.70895 20.2051 6.20973 20.4103 6.91083 20.4103C7.61192 20.4103 8.01255 20.2051 8.21286 19.6923C8.44058 18.9992 8.54242 18.2692 8.51333 17.5385V15.0769H13.421V17.1282C13.5229 18.9651 12.9911 20.7803 11.9187 22.2564C10.9171 23.4872 9.21443 24.1026 6.81067 24.1026C4.40692 24 2.6041 23.3846 1.60253 22.0513Z"/>
-        <path d="M19.3302 0.307617H25.0391L29.2457 23.6922H24.6385L23.8372 18.7692H20.5321L19.7308 23.6922H15.0235L19.3302 0.307617ZM23.4366 15.6922L22.2347 6.56403L21.0329 15.6922H23.4366Z"/>
-        <path d="M32.7512 4.20505H29.3459V0.307617H41.2645V4.10249H37.8592V23.6922H32.7512V4.20505Z"/>
-        <path d="M50.3787 0.307617H59.1925V2.76916H53.4836V10.4615H58.0908V12.8204H53.4836V21.4358H59.1925V23.7948H50.2786V0.307617H50.3787Z"/>
-        <path d="M61.7966 0.307617H64L70.5102 15.7948V0.307617H73.1143V23.6922H71.1111L64.5008 7.69223V23.6922H61.7966V0.307617Z"/>
-        <path d="M76.119 0.307617H84.9327V2.76916H79.2238V10.4615H83.831V12.8204H79.2238V21.4358H84.9327V23.7948H76.119V0.307617Z"/>
-        <path d="M87.5368 0.3076H92.144C93.9564 0.179397 95.7575 0.685711 97.252 1.7435C98.3537 2.66657 98.8545 4.3076 98.8545 6.46145C98.8545 9.4358 97.9531 11.282 96.0501 11.8973L99.2551 23.5897H96.1503L93.1456 12.6153H90.6416V23.5897H87.4366V0.3076H87.5368ZM91.9437 10.3589C92.9762 10.446 94.0054 10.1553 94.8482 9.53837C95.4492 9.02555 95.7496 7.99991 95.7496 6.46145C95.7774 5.69719 95.6757 4.93378 95.4492 4.20504C95.2237 3.68211 94.8366 3.24964 94.3474 2.97427C93.6576 2.65236 92.9003 2.51137 92.144 2.56401H90.7418V10.2563H91.9437V10.3589Z"/>
-        <path d="M102.861 21.9489C101.82 20.1556 101.331 18.0824 101.458 16.0002V8.20531C101.434 6.719 101.602 5.23592 101.959 3.79506C102.294 2.71836 102.962 1.78243 103.862 1.12839C104.981 0.450519 106.271 0.129161 107.568 0.205314C109.671 0.205314 111.174 0.718135 112.075 1.84634C113.112 3.33607 113.608 5.15002 113.477 6.97455V7.79506H110.473V7.07711C110.477 6.21813 110.41 5.36032 110.272 4.51301C110.188 3.97756 109.9 3.49816 109.471 3.17967C108.908 2.80128 108.24 2.62124 107.568 2.66685C106.85 2.61973 106.139 2.83809 105.565 3.28224C105.329 3.48554 105.137 3.73594 104.999 4.01811C104.861 4.30029 104.781 4.60829 104.764 4.92326C104.632 5.84017 104.565 6.76567 104.563 7.69249V16.4104C104.49 17.7386 104.694 19.0676 105.164 20.3079C105.565 21.1284 106.366 21.4361 107.568 21.4361C108.043 21.4966 108.524 21.4121 108.952 21.1931C109.379 20.9741 109.734 20.6304 109.972 20.2053C110.501 18.9083 110.741 17.5067 110.673 16.1027V14.4617H107.768V12.1028H113.577V23.6925H111.574L111.274 21.0258C111.011 21.9195 110.464 22.6977 109.72 23.2366C108.976 23.7756 108.078 24.0443 107.167 24.0002C106.34 24.05 105.513 23.8887 104.761 23.5307C104.01 23.1727 103.357 22.6291 102.861 21.9489Z"/>
-        <path d="M119.988 15.4871L115.08 0.410156H118.085L121.59 11.6922L124.995 0.410156H128L123.092 15.4871V23.6922H120.088V15.4871H119.988Z"/>
-        </g>
-        <defs>
-        <clipPath id="clip0">
-        <rect width="128" height="24" fill="white"/>
-        </clipPath>
-        </defs>
-        </svg></a></div>
+      <div class="page-footer__name"><a href="index.html"><svg class="page-footer__logo" width="128" height="24"
+            viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            <path
+              d="M1.60253 22.0513C0.468358 20.3682 -0.0946573 18.3503 3.016e-05 16.3077V7.79487C-0.137317 5.73031 0.390444 3.67661 1.50238 1.94872C2.6041 0.615385 4.30676 0 6.81067 0C9.31458 0 10.9171 0.615385 11.9187 1.74359C13.006 3.17255 13.5409 4.96181 13.421 6.76923V8.82051H8.51333V6.46154C8.55297 5.76385 8.45065 5.06533 8.21286 4.41026C8.08576 4.14583 7.88431 3.9264 7.63443 3.78018C7.38455 3.63395 7.09766 3.56763 6.81067 3.58974C6.10958 3.58974 5.60879 3.79487 5.40848 4.30769C5.18191 5.03643 5.08025 5.79984 5.10801 6.5641V17.5385C5.05512 18.2799 5.19327 19.0227 5.50864 19.6923C5.70895 20.2051 6.20973 20.4103 6.91083 20.4103C7.61192 20.4103 8.01255 20.2051 8.21286 19.6923C8.44058 18.9992 8.54242 18.2692 8.51333 17.5385V15.0769H13.421V17.1282C13.5229 18.9651 12.9911 20.7803 11.9187 22.2564C10.9171 23.4872 9.21443 24.1026 6.81067 24.1026C4.40692 24 2.6041 23.3846 1.60253 22.0513Z" />
+            <path
+              d="M19.3302 0.307617H25.0391L29.2457 23.6922H24.6385L23.8372 18.7692H20.5321L19.7308 23.6922H15.0235L19.3302 0.307617ZM23.4366 15.6922L22.2347 6.56403L21.0329 15.6922H23.4366Z" />
+            <path d="M32.7512 4.20505H29.3459V0.307617H41.2645V4.10249H37.8592V23.6922H32.7512V4.20505Z" />
+            <path
+              d="M50.3787 0.307617H59.1925V2.76916H53.4836V10.4615H58.0908V12.8204H53.4836V21.4358H59.1925V23.7948H50.2786V0.307617H50.3787Z" />
+            <path
+              d="M61.7966 0.307617H64L70.5102 15.7948V0.307617H73.1143V23.6922H71.1111L64.5008 7.69223V23.6922H61.7966V0.307617Z" />
+            <path
+              d="M76.119 0.307617H84.9327V2.76916H79.2238V10.4615H83.831V12.8204H79.2238V21.4358H84.9327V23.7948H76.119V0.307617Z" />
+            <path
+              d="M87.5368 0.3076H92.144C93.9564 0.179397 95.7575 0.685711 97.252 1.7435C98.3537 2.66657 98.8545 4.3076 98.8545 6.46145C98.8545 9.4358 97.9531 11.282 96.0501 11.8973L99.2551 23.5897H96.1503L93.1456 12.6153H90.6416V23.5897H87.4366V0.3076H87.5368ZM91.9437 10.3589C92.9762 10.446 94.0054 10.1553 94.8482 9.53837C95.4492 9.02555 95.7496 7.99991 95.7496 6.46145C95.7774 5.69719 95.6757 4.93378 95.4492 4.20504C95.2237 3.68211 94.8366 3.24964 94.3474 2.97427C93.6576 2.65236 92.9003 2.51137 92.144 2.56401H90.7418V10.2563H91.9437V10.3589Z" />
+            <path
+              d="M102.861 21.9489C101.82 20.1556 101.331 18.0824 101.458 16.0002V8.20531C101.434 6.719 101.602 5.23592 101.959 3.79506C102.294 2.71836 102.962 1.78243 103.862 1.12839C104.981 0.450519 106.271 0.129161 107.568 0.205314C109.671 0.205314 111.174 0.718135 112.075 1.84634C113.112 3.33607 113.608 5.15002 113.477 6.97455V7.79506H110.473V7.07711C110.477 6.21813 110.41 5.36032 110.272 4.51301C110.188 3.97756 109.9 3.49816 109.471 3.17967C108.908 2.80128 108.24 2.62124 107.568 2.66685C106.85 2.61973 106.139 2.83809 105.565 3.28224C105.329 3.48554 105.137 3.73594 104.999 4.01811C104.861 4.30029 104.781 4.60829 104.764 4.92326C104.632 5.84017 104.565 6.76567 104.563 7.69249V16.4104C104.49 17.7386 104.694 19.0676 105.164 20.3079C105.565 21.1284 106.366 21.4361 107.568 21.4361C108.043 21.4966 108.524 21.4121 108.952 21.1931C109.379 20.9741 109.734 20.6304 109.972 20.2053C110.501 18.9083 110.741 17.5067 110.673 16.1027V14.4617H107.768V12.1028H113.577V23.6925H111.574L111.274 21.0258C111.011 21.9195 110.464 22.6977 109.72 23.2366C108.976 23.7756 108.078 24.0443 107.167 24.0002C106.34 24.05 105.513 23.8887 104.761 23.5307C104.01 23.1727 103.357 22.6291 102.861 21.9489Z" />
+            <path
+              d="M119.988 15.4871L115.08 0.410156H118.085L121.59 11.6922L124.995 0.410156H128L123.092 15.4871V23.6922H120.088V15.4871H119.988Z" />
+
+            <defs>
+              <clipPath id="clip1">
+                <rect width="128" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg></a></div>
 
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -225,6 +242,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>

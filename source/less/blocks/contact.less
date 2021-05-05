@@ -3,12 +3,15 @@
 
 .contact-wrapper {
   padding: 20px;
+  box-sizing: border-box;
+  min-width: 300px;
 }
 
 .contact__adress {
   justify-content: space-between;
   display: flex;
   align-items: flex-end;
+  min-width: 280px;
 }
 
 .contact__title {
@@ -22,7 +25,9 @@
 
 .contact__map {
   height: 362px;
-  background: url("../../img/location.png") no-repeat;
+  min-width: 300px;
+  margin: 0;
+  background: url("../../img/location.png") no-repeat center;
   background-size: cover;
 
   @media (min-width: @tablet) {

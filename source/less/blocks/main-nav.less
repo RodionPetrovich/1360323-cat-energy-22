@@ -12,11 +12,13 @@
   flex-direction: column;
   justify-content: center;
 
-  div {
+  button {
     width: 24px;
     height: 1.5px;
     background-color: black;
     position: relative;
+    border: none;
+    padding: 0;
 
     &::before {
       content: "";
@@ -74,5 +76,6 @@
 }
 
 .site-list__item--current {
+  border-bottom: 2px solid @basic-green;
 }
 
