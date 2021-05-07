@@ -1,11 +1,20 @@
 .page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  min-height: 200px;
+  min-width: 320px;
 }
 
 .page-header__logo {
+  flex-grow: 1;
+  box-sizing: border-box;
+  min-width: 300px;
   display: flex;
   justify-content: space-between;
-  background: url("../../img/footer-logo.svg") no-repeat center;
   height: 66px;
+  align-items: center;
+  padding: 0 15px;
 }
 
 .page-header__logo-image {

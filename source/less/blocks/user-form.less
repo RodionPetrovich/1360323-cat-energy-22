@@ -1,0 +1,122 @@
+.user-form {
+  display: flex;
+  flex-direction: column;
+  color: @text-grey;
+
+  textarea {
+    text-align: center;
+    padding: 10px;
+  }
+
+  ::-webkit-input-placeholder {
+    color: @text-grey;
+  }
+
+  ::-moz-placeholder {
+    color: @text-grey;
+  }/* Firefox 19+ */
+  :-moz-placeholder {
+    color: @text-grey;
+  }/* Firefox 18- */
+  :-ms-input-placeholder {
+    color: @text-grey;
+  }
+}
+
+.user-form__item {
+  display: flex;
+  margin: 10px 0;
+
+
+  label {
+    margin-right: 10px;
+    align-self: center;
+  }
+}
+
+.user-form__field {
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-height: 45px;
+  border: 1px solid @border;
+  padding-left: 20px;
+  color: @text-grey;
+
+  &:focus-visible {
+    outline: 2px solid #444444;
+  }
+
+  &--none {
+    border: none;
+  }
+}
+
+.input-wrapper {
+  box-sizing: border-box;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid @border;
+  padding-right: 13px;
+
+  .user-form__field:focus-visible {
+    outline: none;
+  }
+
+  .icon-email {
+    stroke: #222222;
+  }
+
+  .icon-phone {
+    fill: #222222;
+  }
+
+  &:focus-within {
+    outline: 2px solid #444444;
+  }
+}
+
+.form-wrapper {
+  box-sizing: border-box;
+  .mar-pad(0;0);
+  border: none;
+  border-top: 2px solid #68b738;
+  padding: 0 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    padding: 0 70px;
+    margin-top: 20px;
+  }
+
+  .contact-form {
+    box-sizing: border-box;
+    width: 210px;
+    padding-top: 25px;
+
+    @media (min-width: @tablet) {
+      min-width: 365px;
+      padding-top: 0;
+    }
+  }
+
+  legend {
+    font-size: 24px;
+    line-height: 26px;
+    text-align: left;
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+    padding-right: 20px;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background-color: white;
+      left: -20px;
+    }
+  }
+}
+

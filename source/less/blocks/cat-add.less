@@ -1,0 +1,83 @@
+.cat-add {
+  .mar-pad(0;0);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cat-add__item {
+
+  box-sizing: border-box;
+  .size(280px;40px);
+  display: flex;
+  padding-left: 45px;
+}
+
+.cat-add__checkbox {
+  & + label {
+    min-width: 100%;
+    align-self: center;
+    position: relative;
+
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      outline: 1px solid @darken-grey;
+      position: absolute;
+      top: -5px;
+      left: -45px;
+      cursor: pointer;
+    }
+  }
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -45px;
+    top: -5px;
+    cursor: pointer;
+    background: url("../../img/Vector.svg") no-repeat center;
+  }
+}
+
+.cat-add__frapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 34px;
+  max-width: 829px;
+  align-content: center;
+  align-self: center;
+
+
+  .button {
+    min-width: 280px;
+    max-width: 568px;
+
+    @media (min-width: @tablet) {
+      min-height: 52px;
+    }
+  }
+
+  p {
+    box-sizing: border-box;
+    min-width: 280px;
+    line-height: 16px;
+    min-height: 40px;
+    padding-top: 8px;
+    align-self: center;
+    text-align: center;
+
+    @media (min-width: @tablet) {
+      text-align: left;
+    }
+  }
+}
+
