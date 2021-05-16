@@ -1,0 +1,113 @@
+.add-item {
+}
+
+
+.add-item__wrapper {
+  box-sizing: border-box;
+  min-width: 320px;
+  padding: 0 20px;
+
+
+  h2 {
+    box-sizing: border-box;
+    position: relative;
+    font-size: 24px;
+    line-height: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 53px;
+      border-top: 2px solid #68b738;
+      bottom: 8px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.add-item__list {
+  box-sizing: border-box;
+  min-width: 280px;
+  min-height: 100px;
+  list-style: none;
+  .mar-pad(0;0);
+  margin: 0;
+}
+
+.add-item__item {
+  margin: 0;
+  min-width: 280px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ebebeb;
+
+  h3 {
+    line-height: 16px;
+    color: @special-dark-grey;
+  }
+
+  &:nth-child(1) {
+    border-top: 1px solid #ebebeb;
+  }
+
+  .button {
+    min-width: 280px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.add-item__info {
+  display: flex;
+  justify-content: space-between;
+  min-width: 280px;
+  line-height: 14px;
+  color: @text-grey;
+
+  dd {
+    margin: 0;
+  }
+}
+
+
+.present {
+  box-sizing: border-box;
+  min-width: 320px;
+  padding: 0 20px;
+
+  & ~ .contact-wrapper {
+    background-color: @grey;
+  }
+}
+
+
+.present__wrapper {
+  margin-top: 40px;
+  background: url("../../img/present_background.png") no-repeat center;
+  background-size: cover;
+  min-width: 280px;
+  min-height: 289px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+
+  p {
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    align-self: center;
+    text-align: center;
+    width: 160px;
+    flex-grow: 1;
+  }
+
+  svg {
+    min-width: 200px;
+    flex-grow: 1;
+  }
+}
